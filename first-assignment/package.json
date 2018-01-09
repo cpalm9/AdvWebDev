@@ -1,0 +1,18 @@
+{
+  "name": "first-assignment",
+  "version": "1.0.0",
+  "description": "The purpose of this assignment is to introduce you to the grading utility.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "private": true,
+  "author": "James Speirs <james_speirs@byu.edu>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "4.1.0"
+  }
+}
