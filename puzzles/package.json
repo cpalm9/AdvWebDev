@@ -1,0 +1,18 @@
+{
+  "name": "puzzles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "James Speirs <james_speirs@byu.edu>",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "4.1.0"
+  }
+}
