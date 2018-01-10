@@ -51,5 +51,3 @@ function countPositivesSumNegatives(numbers) {
 function add(a, b) {
     return a + b;
 }
-
-countPositivesSumNegatives([ -169, -981, 673, 690, -780, -851, -877, -221, -6, -328, -7, -606, 598, 470 ])
