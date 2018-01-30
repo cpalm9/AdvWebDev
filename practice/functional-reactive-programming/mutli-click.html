@@ -1,0 +1,46 @@
+<!--
+  @license
+    Copyright 2016 Brigham Young University
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Click</title>
+    <script src="./bower_components/bacon/dist/Bacon.js"></script>
+</head>
+<body>
+
+<div id='triple' style="border: 1px solid black; height: 200px; user-select: none;">
+    <div>Triple Click in this Box</div>
+    <div>Click Count: <span id="click-count"></span></div>
+</div>
+
+<script>
+    const clickStream = Bacon.fromEventTarget(document.querySelector('#triple'), "click");
+
+    const bufferedClickStream = clickStream.bufferWithTime(300);
+
+    const clickCount = bufferedClickStream.map(events => events.length);
+    const doubleClick = bufferedClickStream.filter(events => events.length === 2);
+    const tripleClick = bufferedClickStream.filter(events => events.length === 3);
+
+    clickCount.onValue(value => {
+        document.querySelector('#click-count').innerHTML = value;
+    });
+</script>
+
+</body>
+</html>

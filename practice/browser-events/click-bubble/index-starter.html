@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Click Bubble</title>
+    <style>
+        div {
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid;
+        }
+        .outside {
+            border-color: red;
+        }
+        .middle {
+            border-color: green;
+        }
+        .inside {
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="outside">
+    Outside
+    <div class="middle">
+        Middle
+        <div class="inside">
+            Inside
+        </div>
+    </div>
+</div>
+
+<script>
+    function outsideClickHandler(e) {
+        console.log('Outside');
+    }
+    function middleClickHandler(e) {
+        console.log('Middle');
+    }
+    function insideClickHandler(e) {
+        console.log('Inside');
+    }
+</script>
+</body>
+</html>

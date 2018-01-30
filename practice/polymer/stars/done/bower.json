@@ -1,0 +1,23 @@
+{
+  "name": "stars",
+  "homepage": "https://github.com/Gi60s/it410-resources",
+  "authors": [
+    "James Speirs <james.speirs@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-icon": "PolymerElements/iron-icon#^1.0.12",
+    "iron-icons": "PolymerElements/iron-icons#^1.2.0",
+    "paper-button": "PolymerElements/paper-button#^1.0.14"
+  }
+}

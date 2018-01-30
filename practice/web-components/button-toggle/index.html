@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Button Toggle</title>
+    <style>
+        code {
+            font-family: monospace;
+            display: block;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<p>
+    <code>&lt;button-toggle&gt;&lt;/button-toggle&gt;</code>
+    <button-toggle></button-toggle>
+</p>
+
+<p>
+    <code>&lt;button-toggle pressed&gt;&lt;/button-toggle&gt;</code>
+    <button-toggle pressed></button-toggle>
+</p>
+
+<p>
+    <code>&lt;button-toggle disabled&gt;&lt;/button-toggle&gt;</code>
+    <button-toggle disabled></button-toggle>
+</p>
+
+<p>
+    <code>&lt;button-toggle pressed disabled&gt;&lt;/button-toggle&gt;</code>
+    <button-toggle pressed disabled></button-toggle>
+</p>
+
+<p>
+<code>&lt;button-toggle&gt;Custom Text&lt;/button-toggle&gt;</code>
+<button-toggle id="custom">Custom Text</button-toggle>
+</p>
+
+<p>
+    <button onclick="toggleCustomPressed()">Toggle Custom Pressed</button>
+    <button onclick="toggleCustomDisabled()">Toggle Custom Disabled</button>
+</p>
+
+<script type="text/javascript" src="button-toggle.js"></script>
+<script>
+    function toggleCustomPressed() {
+        const custom = document.getElementById('custom');
+        custom.toggle();
+    }
+
+    function toggleCustomDisabled() {
+        const custom = document.getElementById('custom');
+        custom.disabled = !custom.disabled;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<link rel="import" href="./bower_components/polymer/polymer.html">
+<link rel="import" href="./bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="./bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="icon-toggle">
+
+
+    <template>
+
+        <style>
+            /* local DOM styles go here */
+            :host {
+                display: inline-block;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            iron-icon {
+                fill: white;
+                stroke: currentcolor;
+            }
+            :host([pressed]) iron-icon {
+                fill: currentcolor;
+            }
+        </style>
+
+        <!-- local DOM goes here -->
+        <iron-icon icon="polymer"></iron-icon>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'icon-toggle',
+
+            // add properties with an icon identifer and a pressed state
+
+            // add listeners object with tap: 'toggle'
+
+            // add a toggle function that toggles the pressed state
+
+        });
+    </script>
+
+</dom-module>

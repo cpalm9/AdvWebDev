@@ -1,0 +1,21 @@
+{
+  "name": "functional-reactive-programming",
+  "homepage": "https://github.com/Gi60s/it410-resources",
+  "authors": [
+    "James <james.speirs@gmail.com>"
+  ],
+  "description": "rx js examples",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bacon": "^0.7.92"
+  }
+}

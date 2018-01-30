@@ -1,0 +1,58 @@
+$radius: 4px;
+$color: #555;
+$border-width: 3px;
+
+@mixin border-radius($tl, $tr, $br, $bl) {
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+@mixin box-shadow($hl, $vl, $blur, $spread, $color) {
+  -webkit-box-shadow: $hl $vl $blur $spread $color;
+  -moz-box-shadow: $hl $vl $blur $spread $color;
+  box-shadow: $hl $vl $blur $spread $color;
+}
+
+.modal {
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .window {position: relative;
+    width: 600px;
+    max-width: 90%;
+    background: #FFF;
+    margin: 50px auto;
+    border: $border-width solid darken($color, 35%);
+    opacity: .7;
+    transform: scale(.5);
+    transition: all .5s ease-in-out;
+
+    @include border-radius($radius, $radius, $radius, $radius);
+    @include box-shadow(2px, 2px, 5px, 1px, rgba(0,0,0,0.75));
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .title {
+      padding: 10px;
+      background: $color;
+      color: #FFF;
+      font-size: 20px;
+      border-bottom: $border-width solid darken($color, 35%);
+    }
+
+    .body {
+      padding: 10px;
+      max-height: 60vh;
+      overflow: auto;
+    }
+  }
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SASS</title>
+    <style>
+        body {
+            background: url(background.jpg);
+        }
+        pre {
+            font-family: monospace;
+            background: #DDD;
+            padding: 5px 10px;
+        }
+    </style>
+    <link href="modal.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="modal">
+    <div class="background"></div>
+    <div class="window">
+        <div class="title">Modal Title</div>
+        <div class="body">
+            <p>This modal uses the following CSS:</p>
+            <pre>
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.modal .window {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    background: #FFF;
+    margin: 50px auto;
+    border: 3px solid black;
+    opacity: .7;
+    transform: scale(0.5);
+    transition: all .5s ease-in-out;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+}
+.modal .window:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+.modal .window .title {
+    padding: 10px;
+    background: #555;
+    color: #FFF;
+    font-size: 20px;
+    border-bottom: 3px solid black;
+}
+.modal .window .body {
+    padding: 10px;
+    max-height: 60vh;
+    overflow: auto;
+}
+            </pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
