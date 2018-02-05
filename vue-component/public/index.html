@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vue Component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="app">
+
+    <h3>Pets</h3>
+    <image-slider :index="pet.index" :images="pet.images" v-on:index-change="petIndexChange"></image-slider>
+
+    <h3>Food</h3>
+    <image-slider :index="food.index" :images="food.images" v-on:index-change="foodIndexChange"></image-slider>
+
+    <h3>Landscapes</h3>
+    <image-slider :index="landscape.index" :images="landscape.images"  v-on:index-change="landscapeIndexChange"></image-slider>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script src="components/image-slider.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
